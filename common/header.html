@@ -101,7 +101,7 @@
 >
   {{#if category.color}}
     <a class="category-title-link" href={{category.url}} style="color: #{{category.color}}">
-      <div class="category-text-title">
+      <div class="category-text-title" style="color: #{{category.color}}">
         {{category-title-before category=category}}
         {{#if category.read_restricted}}
           {{d-icon "lock"}}
