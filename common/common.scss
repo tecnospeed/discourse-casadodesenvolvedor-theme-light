@@ -1,25 +1,11 @@
-@font-face {
-  font-family: "Visby Round CF";
-  src: local("Visby Round CF Medium"), local("VisbyRoundCF-Medium"),
-    url("https://cdn.tecnospeed.com.br/fonts/VisbyRoundCF-Medium.woff2")
-      format("woff2"),
-    url("https://cdn.tecnospeed.com.br/fonts/VisbyRoundCF-Medium.woff")
-      format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+@import "fonts";
+@import "variables";
+
+.moderator .regular > .cooked {
+  background-color: $redLightBlush;
 }
-@font-face {
-  font-family: "Visby Round CF";
-  src: local("Visby Round CF ExtraBold"), local("VisbyRoundCF-ExtraBold"),
-    url("https://cdn.tecnospeed.com.br/fonts/VisbyRoundCF-ExtraBold.woff2")
-      format("woff2"),
-    url("https://cdn.tecnospeed.com.br/fonts/VisbyRoundCF-ExtraBold.woff")
-      format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+
+// Global styles
 body,
 html {
   scroll-behavior: smooth;
@@ -27,116 +13,80 @@ html {
     Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont,
     "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  background: $graySolitude;
 }
 
-.d-footer {
-  background: #6dbe99;
-  padding: 1.5rem 0;
-  color: white;
-  & > .wrap {
-    width: calc(100% - 16px);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    & .contents {
-      display: flex;
-      align-items: center;
-      height: 100%;
-    }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: on;
+  font-feature-settings: on;
+}
+
+a.badge-notification.new-topic {
+  background: transparent;
+  padding-left: 0 !important;
+  &:before {
+    display: none !important;
   }
-  .d-icon-heart {
-    color: #e37f7d;
+  &:after {
+    content: "novo";
+    position: relative;
+    margin-top: -1px;
+    background: $redLightBlush;
+    color: $redDeepBlush;
+    padding: 0.2em 0.42em !important;
+    border-radius: 100px;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
   }
-  .rights {
-    text-align: center;
-    width: 100%;
-    a {
-      color: white;
-      text-decoration: underline;
-      transition: all 0.3s ease-in;
-      &:hover {
-        color: #212121;
-      }
-    }
-  }
-  .social {
-    display: inline-flex;
-    .text-link {
-      font-size: 1.25em;
-      color: white;
-      align-self: center;
-      transition: all 0.25s ease-in-out;
-      &:hover {
-        color: #212121;
-        text-decoration: underline;
-      }
-    }
-    .icon {
-      display: flex;
-      border-radius: 15%;
-      width: 2.5em;
-      height: 2.5em;
-      border: solid 2px white;
-      color: white;
-      transition: all 0.3s ease-in-out;
-      fill: currentColor !important;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      margin-right: 0.75em;
+}
 
-      &:last-child {
-        margin-right: 0;
-      }
+.moderator .regular > .cooked {
+  background-color: $redLightBlush;
+}
 
-      &:visited {
-        color: white;
-      }
+// Global styles
 
-      & svg {
-        width: 1.5em;
-        height: 1.5em;
-      }
+html {
+  font-family: Graphik, sans-serif;
+  font-size: 16px;
+  background: $graySolitude;
+}
 
-      &:hover {
-        text-decoration: none;
-        color: white;
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: on;
+  font-feature-settings: on;
+}
 
-        &.facebook {
-          border-color: #3b5998 !important;
-          color: #3b5998 !important;
-        }
-
-        &.youtube {
-          border-color: #ff0000 !important;
-          color: #ff0000 !important;
-        }
-
-        &.linkedin {
-          border-color: #0077b5 !important;
-          color: #0077b5 !important;
-        }
-
-        &.instagram {
-          border-color: #e4405f !important;
-          color: #e4405f !important;
-        }
-
-        &.github {
-          border-color: #24292e !important;
-          color: #24292e !important;
-        }
-      }
+body:not(.staff)[class*="category-"] {
+  // Hide navigation bar in categories for non-staff
+  .list-controls {
+    background: transparent;
+    box-shadow: none;
+    padding-top: 0;
+    .select-kit {
+      display: none;
     }
   }
 }
 
-@media screen and (min-width: $small-width) {
-  .d-footer {
-    & > .wrap {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+body[class*="category-"] {
+  // Hide navigation, but not category edit controls for staff
+  #navigation-bar {
+    display: none;
+  }
+  .list-controls {
+    margin-top: 0;
+    padding-top: 10px;
   }
 }
+
+@import "categoryList";
+
+@import "footer";
