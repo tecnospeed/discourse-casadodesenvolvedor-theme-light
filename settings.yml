@@ -1,0 +1,4 @@
+svg_icons:
+  default: "'fab-youtube'|'fab-linkedin'|'fab-github'"
+  type: "list"
+  list_type: "compact"
