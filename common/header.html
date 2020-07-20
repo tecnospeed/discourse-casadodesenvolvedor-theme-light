@@ -94,3 +94,44 @@
   type="text/x-handlebars"
   data-template-name="components/create-topic-button"
 ></script>
+
+<script
+  type="text/x-handlebars"
+  data-template-name="components/category-title-link"
+>
+  {{#if category.color}}
+    <a class="category-title-link" href={{category.url}} style="color: #{{category.color}}">
+      <div class="category-text-title">
+        {{category-title-before category=category}}
+        {{#if category.read_restricted}}
+          {{d-icon "lock"}}
+        {{/if}}
+        <span class="category-name" style="color: #{{category.color}}">{{dir-span category.name}}</span>
+      </div>
+      {{#if category.uploaded_logo.url}}
+        {{cdn-img
+          src=category.uploaded_logo.url
+          class="category-logo"
+          width=category.uploaded_logo.width
+          height=category.uploaded_logo.height}}
+      {{/if}}
+    </a>
+  {{else}}
+    <a class="category-title-link" href={{category.url}}>
+      <div class="category-text-title">
+        {{category-title-before category=category}}
+        {{#if category.read_restricted}}
+          {{d-icon "lock"}}
+        {{/if}}
+        <span class="category-name">{{dir-span category.name}}</span>
+      </div>
+      {{#if category.uploaded_logo.url}}
+        {{cdn-img
+          src=category.uploaded_logo.url
+          class="category-logo"
+          width=category.uploaded_logo.width
+          height=category.uploaded_logo.height}}
+      {{/if}}
+    </a>
+  {{/if}}
+</script>
