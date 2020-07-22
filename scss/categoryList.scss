@@ -4,6 +4,9 @@
   box-sizing: border-box;
   display: block;
   margin-top: 85px;
+  .subcategories {
+    display: none;
+  }
   &.category-description {
     color: $grayScarpaFlow;
   }
@@ -35,11 +38,22 @@
     border: none;
     tr {
       display: flex;
-      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
-        0px 0px 2px rgba(0, 0, 0, 0.14);
+      position: relative;
       border: none;
       background: $white;
-      margin-bottom: 1.5em;
+      margin-bottom: 1.25em;
+
+      &::before {
+        box-shadow: 2px 2px 0.5px 0 rgba(0, 0, 0, 0.1);
+        mix-blend-mode: multiply;
+        content: " ";
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
       @media screen and (max-width: 767px) {
         flex-wrap: wrap;
       }
@@ -54,7 +68,7 @@
         }
         padding: 55px 50px 55px 42px;
         .category-text-title {
-          font-size: 2rem;
+          font-size: 1.33rem;
           color: $blueDark;
           font-weight: bold;
           .d-icon {
@@ -63,8 +77,7 @@
         }
         .category-description {
           color: $grayScarpaFlow;
-          font-size: 1.125rem;
-          line-height: 1.5;
+          font-size: 1.0833rem;
         }
       }
       .latest {
@@ -73,10 +86,10 @@
           padding: 0 42px 55px 42px;
         }
         .featured-topic {
-          font-size: 1.125rem;
+          font-size: 1.0833rem;
           @media screen and (max-width: 767px) {
             display: block;
-            margin-top: 48px;
+            margin-bottom: 0.5em;
             padding-left: 0;
             .title {
               white-space: normal;
