@@ -1,0 +1,21 @@
+#main-outlet {
+  padding-top: 5rem;
+  min-height: 84vh;
+}
+
+.wrap {
+  max-width: unset;
+  padding: 0;
+}
+
+.container.list-container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+:focus {
+  outline: none;
+}
+
+#list-area {
+  padding: 0 0.5em;
+}

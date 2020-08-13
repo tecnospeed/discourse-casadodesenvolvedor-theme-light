@@ -1,0 +1,41 @@
+// Global styles
+html {
+  font-family: Graphik, sans-serif;
+  font-size: 16px;
+  background: $graySolitude;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: on;
+  font-feature-settings: on;
+}
+
+body:not(.staff)[class*="category-"] {
+  // Hide navigation bar in categories for non-staff
+  .list-controls {
+    background: transparent;
+    box-shadow: none;
+    padding-top: 0;
+    .select-kit {
+      display: none;
+    }
+  }
+}
+
+body[class*="category-"] {
+  // Hide navigation, but not category edit controls for staff
+  #navigation-bar {
+    display: none;
+  }
+  .list-controls {
+    margin-top: 0;
+    padding-top: 10px;
+  }
+}
+
+.moderator .regular > .cooked {
+  background-color: $redLightBlush;
+}
