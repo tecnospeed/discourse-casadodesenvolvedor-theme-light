@@ -1,0 +1,68 @@
+<script type="text/discourse-plugin" version="0.8.18">
+  const { h } = require("virtual-dom");
+
+  const headerImageWidth = settings.header_image_width;
+  const headerImageHeight = settings.header_image_height;
+  const headerImageSrc = settings.theme_uploads.header_image;
+
+  api.createWidget("custom-header-widget", {
+    tagName: "div#custom-header",
+    html(attrs) {
+      const { pathname } = window.location;
+      const regex = new RegExp('(^\/(top|categories|latest))|^\/$')
+
+      const header_image_alt = I18n.t(themePrefix("header.image_alt"))
+      const header_title = I18n.t(themePrefix("header.title"))
+      const header_button = I18n.t(themePrefix("header.button"))
+      const header_text = I18n.t(themePrefix("header.text"))
+      const header_activity = I18n.t(themePrefix("header.activity"))
+
+      if(regex.test(pathname)){
+        const { is_anonymous, username } = this.currentUser
+        const action = h("div.custom-header-action",
+          !is_anonymous && username
+          ? h("p.custom-header-text",
+            [ `${header_text} `,
+              h("a.custom-header-link", {
+                title: header_activity,
+                href: `/u/${username}/activity`,
+              }, username),
+              "!"
+            ]
+          )
+          : h("a", { title: header_button, href: "/login", class: "custom-header-button" }, header_button)
+        )
+
+        return h('div.container',
+          [
+            h('div.custom-header-content', [
+              h("h1.custom-header-title", header_title),
+              action
+            ]),
+            h("div.custom-header-image", [
+              h("img", {
+                src: headerImageSrc,
+                width: headerImageWidth,
+                height: headerImageHeight,
+                alt: header_image_alt
+              })
+            ])
+          ]
+        );
+      }
+    }
+  })
+
+  api.decorateWidget('custom-header-widget:after', helper => {
+    helper.widget.appEvents.on('page:changed', () => {
+      helper.widget.scheduleRerender();
+    });
+  });
+</script>
+
+<script
+  type="text/x-handlebars"
+  data-template-name="/connectors/above-main-container/custom-header"
+>
+  {{mount-widget widget="custom-header-widget"}}
+</script>

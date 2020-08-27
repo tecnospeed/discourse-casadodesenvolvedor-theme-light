@@ -5,7 +5,7 @@
   display: block;
   margin-top: 85px;
   &.category-description {
-    color: $grayScarpaFlow;
+    color: $grayWoodSmoke;
   }
   thead {
     box-sizing: border-box;
@@ -19,7 +19,7 @@
     }
     th {
       display: inline-block;
-      color: $grayScarpaFlow;
+      color: $grayWoodSmoke;
       font-size: 0.875rem;
       &.category {
         padding: 0 50px 15px 45px;
@@ -67,14 +67,14 @@
         padding: 55px 50px 55px 42px;
         .category-text-title {
           font-size: 1.33rem;
-          color: $blueDark;
+          color: $blueLochmara;
           font-weight: bold;
           .d-icon {
             color: currentColor;
           }
         }
         .category-description {
-          color: $grayScarpaFlow;
+          color: $grayWoodSmoke;
           font-size: 1.0833rem;
         }
       }
@@ -131,6 +131,6 @@
 
   .featured-topic a.last-posted-at,
   .featured-topic a.last-posted-at:visited {
-    color: $grayScarpaFlow;
+    color: $grayWoodSmoke;
   }
 }

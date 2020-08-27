@@ -1,4 +1,10 @@
 svg_icons:
-  default: "'fab-youtube'|'fab-linkedin'|'fab-github'"
+  default: "fab-youtube|fab-linkedin|fab-github"
   type: "list"
   list_type: "compact"
+header_image_width:
+  type: "string"
+  default: "300"
+header_image_height:
+  type: "string"
+  default: "300"

@@ -1,0 +1,51 @@
+// User
+
+.user-main {
+  max-width: 1110px;
+  @media screen and (max-width: 1140px) {
+    padding: 0 1rem;
+  }
+  margin: 2rem auto;
+  .topic-list {
+    margin-top: 10px;
+  }
+  .about {
+    margin-bottom: 0;
+    .controls ul a {
+      padding: 10px 12px;
+      margin-left: 1rem;
+    }
+    .controls .btn {
+      min-width: unset;
+    }
+  }
+  .primary {
+    padding: 1rem;
+  }
+
+  .user-nav {
+    margin-top: 0;
+    background: $blueLochmara;
+  }
+  .controls ul:not(.select-kit) {
+    display: flex;
+    margin-right: 30px;
+    span {
+      display: flex;
+    }
+    button {
+      display: flex;
+    }
+  }
+}
+
+.user-navigation .nav-stacked a {
+  color: $grayWoodSmoke;
+  &.active {
+    color: $blueLochmara;
+  }
+}
+
+.stats-section .label {
+  color: $grayWoodSmoke;
+}

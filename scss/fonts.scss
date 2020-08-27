@@ -1,10 +1,8 @@
 @font-face {
   font-family: "Visby Round CF";
   src: local("Visby Round CF Medium"), local("VisbyRoundCF-Medium"),
-    url("https://cdn.tecnospeed.com.br/fonts/VisbyRoundCF-Medium.woff2")
-      format("woff2"),
-    url("https://cdn.tecnospeed.com.br/fonts/VisbyRoundCF-Medium.woff")
-      format("woff");
+    url($visbyrounded-medium2) format("woff2"),
+    url($visbyrounded-medium) format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,10 +10,8 @@
 @font-face {
   font-family: "Visby Round CF";
   src: local("Visby Round CF ExtraBold"), local("VisbyRoundCF-ExtraBold"),
-    url("https://cdn.tecnospeed.com.br/fonts/VisbyRoundCF-ExtraBold.woff2")
-      format("woff2"),
-    url("https://cdn.tecnospeed.com.br/fonts/VisbyRoundCF-ExtraBold.woff")
-      format("woff");
+    url($visbyrounded-extrabold2) format("woff2"),
+    url($visbyrounded-extrabold) format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;

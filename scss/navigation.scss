@@ -1,8 +1,12 @@
 // Navigation
+#navigation-bar {
+  margin: 0 auto;
+}
 
 .list-controls {
-  background: $blueDark;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);
+  background: transparent;
+  box-shadow: none;
+  margin-top: -54px;
   .nav {
     margin-bottom: 0;
   }
@@ -19,6 +23,28 @@
       }
     }
   }
+  #create-topic {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    margin: 0;
+    z-index: 3;
+    background: $blueLochmara;
+    color: $white;
+    padding: 20px 24px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+    .d-icon {
+      color: $white;
+    }
+  }
+}
+
+body.categories-list,
+body.navigation-topics {
+  #create-topic {
+    display: none;
+  }
 }
 
 ol.category-breadcrumb {
@@ -31,16 +57,18 @@ ol.category-breadcrumb {
       > a {
         background: transparent;
         color: $white;
-        border-bottom: 2px solid $graySolitude;
+        border-bottom: 2px solid $grayHaze;
       }
     }
     > a {
       padding: 17px 12px;
       color: rgba($white, 0.55);
+      transition: all ease-in 0.3s;
+      border-bottom: 2px solid transparent;
       &:hover {
         background: transparent;
         color: $white;
-        border-bottom: 2px solid $graySolitude;
+        border-color: $grayHaze;
       }
     }
   }
@@ -49,5 +77,5 @@ ol.category-breadcrumb {
 .nav-pills > li > a.active {
   background: transparent;
   color: $white;
-  border-bottom: 2px solid $graySolitude;
+  border-bottom: 2px solid $grayHaze;
 }

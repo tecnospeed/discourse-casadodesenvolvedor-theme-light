@@ -1,0 +1,79 @@
+.user-stream .item {
+  background: $grayHaze;
+}
+
+.user-stream .notification.unread {
+  background: $white;
+}
+
+.user-menu {
+  li.user {
+    padding: 5px 0;
+    .d-icon {
+      display: none;
+    }
+  }
+  ul.menu-links,
+  .menu-links-row {
+    padding: 0;
+  }
+
+  .notifications ul {
+    padding: 0;
+    li:not(.show-all) {
+      padding: 0;
+      a {
+        display: block;
+        padding: 22px 36px;
+      }
+      background: $white;
+      &.read {
+        background: transparent;
+      }
+      span {
+        color: $blueLochmara;
+      }
+      .d-icon {
+        display: none;
+      }
+    }
+    li.show-all .btn {
+      padding: 22px 36px;
+      background: $blueLochmara;
+      border-radius: 0;
+      .d-icon {
+        color: $white;
+      }
+      &:hover {
+        background: $grayWoodSmoke;
+        .d-icon {
+          color: $grayShark;
+        }
+      }
+    }
+  }
+
+  .dismiss-link {
+    display: none;
+  }
+
+  .logout-link {
+    width: 100%;
+    background: $white;
+  }
+
+  a.widget-link.logout {
+    padding: 22px 37px;
+    .d-icon {
+      display: none;
+    }
+  }
+
+  a.widget-link.user-activity-link {
+    padding-left: 5px;
+  }
+}
+
+div.menu-links-header .menu-links-row li.glyphs {
+  display: none;
+}

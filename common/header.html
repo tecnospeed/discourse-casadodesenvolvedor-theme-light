@@ -92,11 +92,6 @@
 
 <script
   type="text/x-handlebars"
-  data-template-name="components/create-topic-button"
-></script>
-
-<script
-  type="text/x-handlebars"
   data-template-name="components/bread-crumbs"
 ></script>
 
@@ -139,4 +134,9 @@
       {{/if}}
     </a>
   {{/if}}
+</script>
+
+<script type="text/discourse-plugin" version="0.8">
+  api.replaceIcon('search', 'search-icon');
+  api.replaceIcon('bars', 'menu-icon');
 </script>

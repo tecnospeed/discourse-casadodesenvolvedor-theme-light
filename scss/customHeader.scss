@@ -1,0 +1,223 @@
+#main-outlet {
+  padding-top: 0;
+}
+
+#custom-header {
+  width: 100%;
+  margin-top: 5em;
+  background: linear-gradient(-120deg, #0f76b8 0%, #36a9e1 100%);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.14);
+
+  .container {
+    max-width: 1110px;
+    margin: 0 auto;
+    width: calc(100% - 0.5em);
+    display: flex;
+  }
+  .custom-header-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    padding: 5em 2em 5em 2em;
+  }
+  .custom-header-title {
+    width: 100%;
+    word-wrap: normal;
+    flex-wrap: wrap;
+    font-weight: bold;
+    color: white;
+    font-size: 2em;
+  }
+  .custom-header-image {
+    display: none;
+    padding: 5em 2em 5em 2em;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .custom-header-button {
+    border: 0.1em solid white;
+    background: transparent;
+    color: white;
+    border-radius: 2em;
+    padding: 0.25em 1.75em;
+    font-size: 1.25em;
+    leading-trim: both;
+    text-edge: cap alphabetic;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+    &:hover {
+      background: white;
+      color: #1a1a1a;
+    }
+  }
+  .custom-header-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    padding: 0.5em 0;
+  }
+  .custom-header-text {
+    color: white;
+  }
+  .custom-header-link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    z-index: 1;
+    &:before {
+      content: "";
+      width: 90%;
+      height: 0.08em;
+      background: white;
+      left: 5%;
+      bottom: 0.1em;
+      position: absolute;
+      transition: all ease-in 0.3s;
+      z-index: -1;
+    }
+    &:hover:before {
+      width: calc(100% + 0.5em);
+      height: 100%;
+      left: -0.25em;
+      right: -0.25em;
+      bottom: 0;
+      background: #1a1a1a;
+    }
+  }
+  @media screen and (min-width: 404px) and (max-width: 766px) {
+    .custom-header-title {
+      width: 75%;
+    }
+  }
+  @media screen and (min-width: 1010px) {
+    .custom-header-title {
+      font-size: 3em;
+      padding-right: 0.5em;
+    }
+  }
+  @media screen and (min-width: 767px) {
+    .custom-header-title {
+      width: 100%;
+    }
+    .custom-header-content {
+      width: 50%;
+    }
+    .custom-header-image {
+      display: flex;
+      width: 50%;
+    }
+  }
+}
+
+.d-header {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);
+  height: 5em;
+  background: $white;
+  > .wrap {
+    max-width: 1110px;
+    position: relative;
+    margin: 0 auto;
+    width: calc(100% - 0.5em);
+  }
+
+  .d-header-icons {
+    position: relative;
+    display: flex;
+
+    .icon {
+      padding: 1.25em;
+      svg {
+        width: 20px;
+        height: 20px;
+        color: $grayWoodSmoke;
+      }
+      .avatar {
+        width: 28px;
+        height: 28px;
+      }
+      &:focus,
+      &:hover {
+        background: $grayHaze;
+        .d-icon {
+          color: $grayShark;
+        }
+      }
+    }
+    .header-dropdown-toggle {
+      order: 2;
+      &.current-user {
+        order: 1;
+      }
+      .d-icon-bars {
+        height: 0.625em;
+      }
+    }
+
+    .badge-notification {
+      top: 1.125em;
+      padding: 0.22em 0.42em;
+      &.unread-private-messages {
+        background: $redDeepBlush;
+      }
+      &.unread-private-messages,
+      &.ring {
+        right: 2.8125em;
+      }
+      &.unread-notifications {
+        right: 0.875em;
+        background: $greenSilverTree;
+      }
+    }
+  }
+
+  .menu-panel {
+    box-shadow: none;
+    border-color: transparent;
+    background: $grayHaze;
+    .menu-container-faq-link {
+      background: $white;
+    }
+    .badge-notification {
+      background: $redLavenderBlush;
+      color: $redDeepBlush;
+    }
+    hr {
+      display: none;
+    }
+    .category-links {
+      .badge-notification {
+        display: none;
+      }
+      background: $white;
+      li.category-link:hover {
+        background: $redLavenderBlush;
+      }
+      li.heading {
+        display: none;
+      }
+      span.badge-category {
+        max-width: unset;
+        padding-left: 0;
+      }
+      .badge-wrapper {
+        padding-left: 0;
+        font-size: 1rem;
+        .badge-category-bg,
+        .badge-category-parent-bg {
+          display: none;
+        }
+      }
+    }
+  }
+}

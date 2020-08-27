@@ -1,0 +1,58 @@
+// Buttons
+
+.btn {
+  border-radius: 100px;
+  padding: 10px 12px;
+}
+
+.btn-flat {
+  .d-icon {
+    color: $grayCloud;
+  }
+}
+
+.btn-default {
+  background: darken($grayHaze, 5%);
+  color: $grayShark;
+  .discourse-no-touch & {
+    &:hover {
+      background: darken($grayHaze, 10%);
+      color: $grayShark;
+      .d-icon {
+        color: $grayShark;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  background: $blueLochmara;
+  color: $white;
+  .discourse-no-touch & {
+    &:hover {
+      background: $bluePicton;
+      color: $white;
+    }
+  }
+}
+
+.btn-primary[disabled],
+.btn-primary.disabled {
+  background: $blueLochmara;
+}
+
+.d-editor-button-bar {
+  .btn {
+    border-radius: 0;
+  }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-top: 0;
+}
+
+.discourse-no-touch .autocomplete ul li a:hover,
+.autocomplete ul li a.selected {
+  background: $redLavenderBlush;
+}

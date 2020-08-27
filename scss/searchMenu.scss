@@ -1,0 +1,128 @@
+.fps-result a.search-link:visited .topic-title {
+  color: $blueLochmara;
+}
+
+.fps-result .blurb {
+  color: $grayWoodSmoke;
+}
+
+.search-title {
+  .bulk-select {
+    display: none;
+  }
+}
+
+.search-menu {
+  .menu-panel {
+    padding: 0;
+
+    .panel-body {
+      width: 100%;
+      top: 0;
+    }
+  }
+  input[type="text"] {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 32px 52px 32px 32px;
+    font-size: 1rem;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .searching {
+    top: 36px;
+    right: 32px;
+  }
+  .search-context {
+    position: relative;
+    margin-top: -20px;
+    padding-bottom: 10px;
+    padding-right: 28px;
+    padding-left: 28px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-top: 0.05em;
+    }
+    .show-help {
+      margin-left: auto;
+    }
+  }
+  .results {
+    padding: 20px;
+    background: $white;
+    .topic-title {
+      font-size: 1.125rem;
+    }
+    .list .item .blurb {
+      font-size: 0.875rem;
+      color: $grayWoodSmoke;
+    }
+    .show-more {
+      margin-left: 9px;
+      width: calc(100% - 9px);
+      box-sizing: border-box;
+      padding: 19px 32px;
+      background: $blueLochmara;
+      border-radius: 2px;
+      a {
+        color: $white;
+      }
+    }
+  }
+  .search-result-topic {
+    li a {
+      padding: 0.5em;
+    }
+  }
+  .search-result-user,
+  .search-result-topic {
+    ul.list {
+      padding: 0;
+    }
+    .badge-wrapper {
+      .badge-category {
+        display: none;
+      }
+    }
+  }
+  .search-result-category {
+    ul.list {
+      padding: 0;
+    }
+  }
+}
+
+.search-container {
+  max-width: 1110px;
+  @media screen and (max-width: 1140px) {
+    padding: 2rem 1rem;
+  }
+  margin: 0 auto;
+  padding-top: 2rem;
+
+  .search-advanced-sidebar {
+    .search-advanced-title {
+      background: $blueLochmara;
+      color: $white;
+      .d-icon {
+        color: currentColor;
+      }
+    }
+
+    .search-advanced-filters {
+      background: darken($grayHaze, 5%);
+    }
+
+    .search-advanced .search-info {
+      align-items: flex-start;
+      border-bottom: 1px solid $grayCloud;
+    }
+  }
+}
