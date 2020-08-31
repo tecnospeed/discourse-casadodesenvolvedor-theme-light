@@ -8,3 +8,6 @@ header_image_width:
 header_image_height:
   type: "string"
   default: "300"
+header_visible_regex:
+  type: "string"
+  default: "(^\/(top|categories|latest|unread))|^\/$"

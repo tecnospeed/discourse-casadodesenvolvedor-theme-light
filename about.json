@@ -13,16 +13,16 @@
   },
   "color_schemes": {
     "Light": {
-      "primary": "36a9e1",
-      "secondary": "ffffff",
-      "tertiary": "0F76B8",
-      "quaternary": "00345c",
-      "header_background": "ffffff",
+      "primary": "1a1a1a",
+      "secondary": "fff",
+      "tertiary": "0f76b8",
+      "quaternary": "0f76b8",
+      "header_background": "fff",
       "header_primary": "1a1a1a",
-      "highlight": "AFDDF3",
-      "danger": "ff6d00",
+      "highlight": "ffeef2",
+      "danger": "e48f15",
       "success": "4caf50",
-      "love": "fa6c8d"
+      "love": "e37f7d"
     }
   }
 }

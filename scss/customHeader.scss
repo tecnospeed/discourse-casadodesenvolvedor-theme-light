@@ -1,10 +1,5 @@
-#main-outlet {
-  padding-top: 0;
-}
-
 #custom-header {
   width: 100%;
-  margin-top: 5em;
   background: linear-gradient(-120deg, #0f76b8 0%, #36a9e1 100%);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.14);
 
@@ -177,47 +172,6 @@
       &.unread-notifications {
         right: 0.875em;
         background: $greenSilverTree;
-      }
-    }
-  }
-
-  .menu-panel {
-    box-shadow: none;
-    border-color: transparent;
-    background: $grayHaze;
-    .menu-container-faq-link {
-      background: $white;
-    }
-    .badge-notification {
-      background: $redLavenderBlush;
-      color: $redDeepBlush;
-    }
-    hr {
-      display: none;
-    }
-    .category-links {
-      .badge-notification {
-        display: none;
-      }
-      background: $white;
-      li.category-link:hover {
-        background: $redLavenderBlush;
-      }
-      li.heading {
-        display: none;
-      }
-      span.badge-category {
-        max-width: unset;
-        padding-left: 0;
-      }
-      .badge-wrapper {
-        width: 100%;
-        padding-left: 0;
-        font-size: 1rem;
-        .badge-category-bg,
-        .badge-category-parent-bg {
-          display: none;
-        }
       }
     }
   }

@@ -1,25 +1,3 @@
-.menu-panel.slide-in {
-  position: absolute;
-}
-
-.menu-panel {
-  div.menu-links-header a {
-    color: $grayShark;
-  }
-  padding: 0;
-  ul:not(.list) {
-    padding: 20px 32px;
-  }
-  .keyboard-shortcuts-link {
-    display: none;
-  }
-}
-
-.menu-panel li a,
-.menu-panel li.heading a {
-  padding: 0.15em 0.5em;
-}
-
 .panel.clearfix,
 .panel-body-contents {
   &:before,
@@ -32,30 +10,4 @@
   .menu-panel {
     width: 450px !important;
   }
-}
-
-.menu-links.columned {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1rem;
-  li {
-    a {
-      color: $blueLochmara;
-    }
-  }
-}
-
-.menu-links.columned {
-  background: transparent;
-}
-
-.menu-container-admin-links,
-.menu-links.custom {
-  background: $white;
-}
-
-.menu-panel.slide-in .panel-body {
-  top: 0;
-  width: 100%;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);
 }

@@ -1,3 +1,62 @@
+// Topic list
+
+#list-area .show-more.has-topics .alert {
+  background: var(--tertiary-medium);
+  padding: 24px 48px;
+  bottom: 17px;
+  a {
+    color: $white;
+  }
+  font-size: 1.125rem;
+}
+#main-outlet > .banner,
+.private_message,
+.regular[class*="category-"] {
+  max-width: 1110px;
+  @media screen and (max-width: 1140px) {
+    padding: 0 1rem;
+  }
+  margin: 0 auto;
+}
+
+a.badge-notification.new-posts {
+  background: $redLavenderBlush;
+  color: $redDeepBlush;
+}
+
+a.badge-notification.unread-posts {
+  background: $grayHaze;
+  color: $grayWoodSmoke;
+}
+
+.topic-list-main-link a.title,
+.topic-list .main-link a.title,
+.latest-topic-list-item .main-link a.title {
+  color: $blueLochmara;
+}
+
+.topic-statuses {
+  .d-icon {
+    color: $blueLochmara;
+  }
+}
+
+.footer-message {
+  h3 {
+    font-weight: normal;
+    color: $blueLochmara;
+  }
+}
+
+.top-title-buttons {
+  display: block;
+  margin-top: 0.75em;
+  button {
+    background: $blueLochmara;
+    color: $white;
+  }
+}
+
 .topic-list {
   margin-top: 85px;
   tbody {

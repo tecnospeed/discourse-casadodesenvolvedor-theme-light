@@ -1,0 +1,7 @@
+.list-controls + .loading-container.visible {
+  margin-top: calc(58px + 0.5em);
+}
+.spinner {
+  border-color: $blueLochmara;
+  border-top-color: transparent;
+}

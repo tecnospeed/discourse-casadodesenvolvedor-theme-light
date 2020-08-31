@@ -1,0 +1,23 @@
+// Category badges
+
+.badge-wrapper.bullet {
+  margin-right: 10px;
+  span.badge-category {
+    font-weight: normal;
+    color: $blueLochmara;
+    order: -1;
+    margin-right: 5px;
+  }
+  .badge-category-parent-bg {
+    display: none;
+    + .badge-category-bg {
+      width: 9px;
+    }
+  }
+  .badge-category-bg {
+    border-radius: 100px;
+  }
+  .d-icon {
+    color: $blueLochmara;
+  }
+}

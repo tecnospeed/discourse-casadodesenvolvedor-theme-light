@@ -1,0 +1,166 @@
+.names span.first {
+  font-weight: 600;
+}
+.cooked .highlight {
+  background-color: $redLavenderBlush;
+}
+.read-state {
+  right: 10px;
+  color: var(--tertiary-medium);
+}
+#topic-title {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  h1 {
+    a {
+      color: $blueLochmara;
+    }
+    font-weight: normal;
+    font-size: 2rem;
+  }
+}
+.extra-info.two-rows h1 {
+  a {
+    color: $blueLochmara;
+  }
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.extra-info-wrapper .badge-wrapper.bullet span.badge-category {
+  color: $blueLochmara;
+}
+
+.extra-info-wrapper .topic-header-extra .discourse-tags .discourse-tag {
+  color: $grayShark !important;
+}
+
+.topic-post {
+  .topic-body,
+  .topic-avatar {
+    border: none;
+  }
+
+  .topic-avatar {
+    padding-right: 10px;
+  }
+
+  .topic-body {
+    margin-bottom: 1em;
+    background: $white;
+    box-sizing: border-box;
+    border: none;
+    padding: 1em;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);
+  }
+}
+nav.post-controls button {
+  border-radius: 100px;
+  &.d-hover,
+  &:focus {
+    background: $grayHaze;
+  }
+}
+
+nav.post-controls {
+  button.bookmark.bookmarked .d-icon,
+  button.has-like .d-icon {
+    color: $blueLochmara;
+  }
+  .like-button {
+    &:hover {
+      background: $grayHaze;
+      border-radius: 100px;
+
+      button {
+        background: transparent;
+      }
+      .d-icon {
+        color: $blueLochmara;
+      }
+    }
+  }
+}
+
+.small-action {
+  border: none;
+}
+
+.topic-status-info {
+  border: none;
+}
+
+.timeline-container .topic-timeline .timeline-scrollarea {
+  border-color: var(--tertiary-medium);
+}
+
+.timeline-container .topic-timeline .timeline-handle {
+  background: $blueLochmara;
+}
+
+#topic-footer-buttons .topic-notifications-button .btn,
+.timeline-container .topic-timeline .timeline-footer-controls button {
+  border-radius: 100px;
+}
+
+.d-icon.d-icon-d-tracking,
+.d-icon.d-icon-d-watching {
+  color: $blueLochmara;
+}
+
+.suggested-topics .suggested-topics-title {
+  font-weight: normal;
+  font-size: 1.5rem;
+  border-bottom: 1px solid $grayCloud;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+h3.suggested-topics-message {
+  font-weight: normal;
+}
+
+#topic-footer-buttons .bookmark.bookmarked .d-icon-bookmark {
+  color: $blueLochmara;
+}
+
+a.mention,
+a.mention-group {
+  background: darken($grayHaze, 5%);
+  font-weight: 600;
+}
+
+blockquote,
+aside.quote,
+aside.quote .title {
+  background: $grayHaze;
+  border-color: darken($grayHaze, 5%);
+}
+
+.quote-controls,
+.quote-controls .d-icon {
+  color: $grayCloud;
+}
+
+// Topic map
+
+.topic-map {
+  background: $grayHaze;
+}
+
+.map:first-of-type .buttons .btn {
+  border-radius: 0;
+}
+
+.topic-map .buttons .btn {
+  background: $grayHaze;
+  .discourse-no-touch & {
+    &:hover {
+      background: darken($grayHaze, 5%);
+      color: $grayShark;
+      .d-icon {
+        color: $grayShark;
+      }
+    }
+  }
+}
