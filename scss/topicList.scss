@@ -58,7 +58,7 @@ a.badge-notification.unread-posts {
 }
 
 .topic-list {
-  margin-top: 85px;
+  margin-top: 2em;
   tbody {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.14);
     tr {
@@ -153,4 +153,13 @@ a.badge-notification.unread-posts {
   @media screen and (max-width: 775px) {
     width: calc(100% - 55px);
   }
+}
+
+body[class*="category-"] .topic-list {
+  margin-top: 1em;
+}
+
+.top-lists {
+  margin-top: 1em;
+  margin-bottom: -1em;
 }
