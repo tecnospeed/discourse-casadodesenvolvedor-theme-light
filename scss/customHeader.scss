@@ -126,6 +126,11 @@
     width: calc(100% - 0.5em);
   }
 
+  .login-button,
+  .sign-up-button {
+    padding: 0.75em 1.5em;
+  }
+
   .d-header-icons {
     position: relative;
     display: flex;
