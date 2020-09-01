@@ -1,8 +1,9 @@
 .groups-page {
   #main-outlet {
     max-width: 1110px;
-    margin: 2em auto 0 auto;
+    margin: 0 auto;
     width: calc(100% - 0.5em);
     display: flex;
+    padding-top: 2rem;
   }
 }
