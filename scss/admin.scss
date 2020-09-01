@@ -20,12 +20,15 @@
     align-content: center;
     & > li {
       margin-right: 0.5em;
-      a.active {
-        background: var(--quaternary);
-        border-radius: 0.5em;
-        border: 0;
+      a {
+        font-size: 1em;
+        .active {
+          background: var(--quaternary);
+          border-radius: 0.5em;
+          border: 0;
+        }
       }
-      &:last-child {
+      a &:last-child {
         margin-right: 0;
       }
     }
