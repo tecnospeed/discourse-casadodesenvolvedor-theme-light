@@ -86,7 +86,6 @@
   function isElementVisible(el) {
     const scrollTop = $(document).scrollTop() + $(window).height()
     const elTop = el.offset().top
-    console.log(scrollTop, elTop, scrollTop>=elTop)
     return {
       condition: scrollTop>=elTop,
       threshold: scrollTop-elTop
