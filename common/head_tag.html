@@ -25,7 +25,7 @@
       const header_activity = I18n.t(themePrefix("header.activity"))
 
       if(regex.test(pathname)){
-        const { is_anonymous, username } = this.currentUser
+        const { is_anonymous = true, username } = this.currentUser || {}
         const action = h("div.custom-header-action",
           !is_anonymous && username
           ? h("p.custom-header-text",
