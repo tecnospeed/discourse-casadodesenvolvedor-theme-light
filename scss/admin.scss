@@ -1,0 +1,41 @@
+.admin-main-nav {
+  .nav.nav-pills {
+    background-color: var(--quaternary);
+    margin-bottom: 0;
+  }
+}
+
+.admin-controls {
+  background-color: var(--primary-low);
+  nav {
+    background-color: var(--tertiary-hover);
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  .nav.nav-pills {
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    .nav-pills > li {
+      margin-right: 0.5em;
+      a.active {
+        background: var(--quaternary);
+        border-radius: 0.5em;
+        border: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.admin-content {
+  .themes-list-header {
+    .btn {
+      border-radius: 0;
+    }
+  }
+}
