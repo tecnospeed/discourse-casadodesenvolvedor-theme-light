@@ -18,7 +18,7 @@
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    .nav-pills > li {
+    & > li {
       margin-right: 0.5em;
       a.active {
         background: var(--quaternary);
