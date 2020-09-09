@@ -12,3 +12,11 @@
     }
   }
 }
+
+#main-outlet {
+  .container.group {
+    max-width: 1110px;
+    margin: 0 auto;
+    width: calc(100% - 0.5em);
+  }
+}
