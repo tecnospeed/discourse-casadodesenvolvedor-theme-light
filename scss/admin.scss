@@ -49,3 +49,12 @@
     }
   }
 }
+
+.admin-users-list {
+  .ember-view {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    max-height: 80vh;
+    margin-top: 0.5em;
+  }
+}
