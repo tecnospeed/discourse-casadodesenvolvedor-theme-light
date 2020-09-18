@@ -7,6 +7,12 @@
   &.category-description {
     color: $grayWoodSmoke;
   }
+  .category-name {
+    display: table-caption;
+    overflow: unset;
+    white-space: unset;
+    text-overflow: unset;
+  }
   thead {
     box-sizing: border-box;
     display: block;
